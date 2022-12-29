@@ -35,6 +35,6 @@ http.createServer((req,res)=>{
             return res.end
         });
     }
-}).listen(6969,()=>{
-    console.log('Port 6969')
+}).listen(8080,()=>{
+    console.log('Port 8080')
 });
