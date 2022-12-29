@@ -19,7 +19,7 @@ http.createServer((req,res)=>{
             return res.end
         });
     }
-    else if(req.url='/contact.html'){
+    else if(req.url='/contact'){
         fs.readFile('contact.html',(err,data)=>{
             if(err) throw err;
             res.writeHead(200,{'Content-Type':'text/html'})
