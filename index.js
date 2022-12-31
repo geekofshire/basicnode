@@ -3,7 +3,7 @@ const fs=require('fs')
 
 
 http.createServer((req,res)=>{
-    if(req.url='/'){
+    if(req.url==='/'){
         fs.readFile('index.html',(err,data)=>{
             if(err) throw err;
             res.writeHead(200,{'Content-Type':'text/html'})
@@ -11,7 +11,7 @@ http.createServer((req,res)=>{
             return res.end
         });
     }
-    else if(req.url='/about'){
+    else if(req.url==='/about'){
         fs.readFile('about.html',(err,data)=>{
             if(err) throw err;
             res.writeHead(200,{'Content-Type':'text/html'})
@@ -19,7 +19,7 @@ http.createServer((req,res)=>{
             return res.end
         });
     }
-    else if(req.url='/contact'){
+    else if(req.url==='/contact'){
         fs.readFile('contact.html',(err,data)=>{
             if(err) throw err;
             res.writeHead(200,{'Content-Type':'text/html'})
