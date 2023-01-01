@@ -4,7 +4,7 @@ const fs=require('fs/promises');
 
 const port=8080;
 
-app.get('/',async (req,res)=>{
+app.get(('/'||'/index.html'),async (req,res)=>{
     res.send(await fs.readFile('./index.html','utf-8'));
 });
 
