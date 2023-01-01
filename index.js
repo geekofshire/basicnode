@@ -2,7 +2,7 @@ const http = require("http");
 const url = require("url");
 const fs = require("fs");
 
-const page404 = fs.readFileSync("404.html", "utf-8", (err, data) => {
+const page404 = fs.readFileSync("error_404.html", "utf-8", (err, data) => {
   if (err) throw err;
   return data;
 });
@@ -23,6 +23,7 @@ http
         res.write(page404);
         return res.end();
       } else {
+        console.log(filename);
         res.writeHead(200, { "Content-Type": "text/html" });
         res.write(data);
         return res.end();
